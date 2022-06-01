@@ -1,0 +1,40 @@
+﻿@page
+@model BelvedereServices.Pages.Forms.CustomServiceModel
+@{
+}
+
+<div class="text-center container">
+    <h1>Select Your Desired Services</h1>
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 bg-light col-4">
+        <input type="text" asp-for="Service.ServiceName"
+        placeholder="Name for the order.." />
+        <br/>
+
+        <input type="checkbox" asp-for="Service.GrassCutting"
+        placeholder="Grass Cutting" /> GrassCutting
+        <br/>
+        <input type="checkbox" asp-for="Service.RoofCleaning"
+        placeholder="Roof Cleaning" /> RoofCleaning
+        <br/>
+        <input type="checkbox" asp-for="Service.TreePlanting"
+        placeholder="Tree Planting" /> TreePlanting
+        <br/>
+        <input type="checkbox" asp-for="Service.Powerwashing"
+        placeholder="Powerwashing" /> Powerwashing
+        <br/>
+        <input type="checkbox" asp-for="Service.ClutterRemoval"
+        placeholder="Clutter Removal" /> ClutterRemoval
+        <br/>
+        <input type="checkbox" asp-for="Service.HousePainting"
+        placeholder="House Painting" /> HousePainting
+        <br/>
+        <input type="checkbox" asp-for="Service.PoolInstallation"
+        placeholder="Pool Installation" /> PoolInstallation
+        <br/>
+        <input type="checkbox" asp-for="Service.ProblemSolving"
+        placeholder="Problem Solving" /> ProblemSolving
+        <br/>
+
+        <button class="btn btn-primary mt-1" type="submit">Order my Service!</button>
+    </form>
+</div>

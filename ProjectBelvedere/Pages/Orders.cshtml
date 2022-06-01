@@ -1,0 +1,101 @@
+﻿@page
+@model BelvedereServices.Pages.OrdersModel
+@{
+}
+
+<h3>Orders</h3>
+
+<hr />
+
+<table class="table">
+    <thread>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Service Name
+            </th>
+            <th>
+                Price
+            </th>
+                                        @*removed until database issue resolved.*@
+@*            <th>
+                Datetime
+            </th>
+            <th>
+                Grass Cutting
+            </th>
+            <th>
+                Roof Cleaning
+            </th>
+            <th>
+                Tree Planting
+            </th>
+            <th>
+                Powerwashing
+            </th>
+            <th>
+                Clutter Removal
+            </th>
+            <th>
+                House Painting
+            </th>
+            <th>
+                Pool Installation
+            </th>
+            <th>
+                ProblemSolving
+            </th>
+        </tr>*@
+    </thread>
+    <tbody>
+
+        @foreach(var order in Model.ServiceOrders){
+            <tr>
+                <td>
+                    @order.Id
+                </td>
+                <td>
+                    @order.ServiceName
+                </td>
+                <td>
+                    @order.BasePrice
+                </td>
+
+                                        @*removed until database issue resolved.*@
+@*                <td>
+                    @order.Datetime
+                </td>
+                <td>
+                    @order.GrassCutting
+                </td>
+                <td>
+                    @order.RoofCleaning
+                </td>
+                <td>
+                    @order.TreePlanting
+                </td>
+                <td>
+                    @order.Powerwashing
+                </td>
+                <td>
+                    @order.ClutterRemoval
+                </td>
+                <td>
+                    @order.HousePainting
+                </td>
+                <td>
+                    @order.PoolInstallation
+                </td>
+                <td>
+                    @order.ProblemSolving
+                </td>*@
+            </tr>
+        }
+
+        <tr>
+
+        </tr>
+    </tbody>
+</table>

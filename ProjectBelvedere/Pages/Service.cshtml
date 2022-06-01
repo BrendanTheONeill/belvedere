@@ -1,0 +1,47 @@
+﻿@page
+@model BelvedereServices.Pages.ServiceModel
+@{
+}
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4 text-capitalize text-black">
+            Our Great Selection of Services!</h1>
+            <h4>Choose one, or try our Service Builder!</h4>
+            <p class="smallText"><i>Make a selection.</i></p>
+         </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5 mt-5">
+                <div class="w-100 row makeYourOwnDiv">
+                    <div class="col-4">
+                        <img src="~/images/Services/balloonhouse.png" class="w-100" />
+                    </div>
+                    <div class="col-8 alig-items-center">
+                        <div class="align-middle makeYourOwnText">
+                            <h3 style="text-align:left;">Create a custom set of services!</h3>
+                            <p style="text-align: left;">Make your own Service with our Service Maker!</p>
+                            <a class="btn btn-primary" style="float: left" asp-area="" asp-page="Forms/CustomService">Try now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @foreach (var service in Model.fakeServiceDB)
+                {
+                var imagePath = "~/images/Services/" + (service.ImageTitle + ".png");
+
+                    <div class="col-4 mb-5">
+                        <a class = "service-img" asp-area="" asp-page="Checkout/Checkout"
+                        asp-route-ImageTitle="@service.ImageTitle"
+                        asp-route-ServiceName="@service.ImageTitle"
+                        asp-route-ServicePrice="@service.FinalPrice">
+                        <img src="@imagePath" class="w-100" asp-append-version="true" />
+                    </a>
+                        <br/>
+                    </div>
+                }
+               
+            
+        </div>
+    </div>
+</div>
